@@ -10,13 +10,19 @@ Se requiere al menos Java 11, para verificacion simple:
 Para compilar se incluye el plugins de docker para empaquetar todo el proyecto:
 
 ```bash
-./mvnw clean package jib:dockerBuild
+./mvnw clean package -DskipTests
 ```
 
 En el caso de Windows debe utilizar el script mvnw.cmd en lugar del mvnw
 
 ```
-.\mvnw.cmd clean package jib:dockerBuild
+.\mvnw.cmd clean package -DskipTests
+```
+
+Construir la imagen del contenedor con la aplicacion
+
+```bash
+docker build -t jtux/spring-boot-demo .
 ```
 
 Para levantar el contenedor de la aplicacion, además de las dependencias; se debe ubicarse en el directorio donde se encuentra el archivo docker-compose.yaml y ejecutar
