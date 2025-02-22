@@ -15,6 +15,10 @@ mvnw clean package jib:dockerBuild
 
 En el caso de Windows debe utilizar el script mvnw.cmd en lugar del mvnw
 
+```
+.\mvnw.cmd clean package jib:dockerBuild
+```
+
 Para levantar el contenedor de la aplicacion, además de las dependencias; se debe ubicarse en el directorio donde se encuentra el archivo docker-compose.yml y ejecutar
 
 ```bash
