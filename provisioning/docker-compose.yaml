@@ -1,4 +1,3 @@
-version: '3'
 volumes:
   sonarqube_conf:
   sonarqube_data:
