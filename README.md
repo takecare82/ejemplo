@@ -3,6 +3,8 @@ Demo project
 
 Se requiere al menos Java 11, para verificacion simple:
 
+### Linux / macOS
+
 ```bash
 ./mvnw verify
 ```
@@ -15,19 +17,21 @@ Para compilar se incluye el plugins de docker para empaquetar todo el proyecto:
 
 En el caso de Windows debe utilizar el script mvnw.cmd en lugar del mvnw
 
-```
+### Windos
+
+```cmd
 .\mvnw.cmd clean package -DskipTests
 ```
 
 Construir la imagen del contenedor con la aplicacion
 
-```bash
+```
 docker build -t jtux/spring-boot-demo .
 ```
 
 Para levantar el contenedor de la aplicacion, además de las dependencias; se debe ubicarse en el directorio donde se encuentra el archivo docker-compose.yaml y ejecutar
 
-```bash
+```
 cd provisioning
 docker compose up
 ```
