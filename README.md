@@ -23,7 +23,7 @@ En el caso de Windows debe utilizar el script mvnw.cmd en lugar del mvnw
 .\mvnw.cmd clean package -DskipTests
 ```
 
-Construir la imagen del contenedor con la aplicacion
+Construir la imagen del contenedor con la aplicacion, sin importar el SO
 
 ```
 docker build -t jtux/spring-boot-demo .
