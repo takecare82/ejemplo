@@ -30,14 +30,13 @@ public class DemoRestController {
     public String ping(@RequestParam String ipAddress){
         String response = "";
         String os = System.getProperty("os.name").toLowerCase();
-        String[] command;
+        ProcessBuilder processBuilder = new ProcessBuilder();
         if (os.contains("win")) {
-            command = new String[]{"ping", "-n", "4", ipAddress};
+            processBuilder.command("cmd", "/c", "ping -n 4 "+ipAddress);
         } else {
-            command = new String[]{"ping", "-c", "4", ipAddress};
+            processBuilder.command("bash", "-c", "ping -c 4 "+ipAddress);
         }
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder(command);
             Process process = processBuilder.start();
             BufferedReader reader =
                     new BufferedReader(new InputStreamReader(process.getInputStream()));
