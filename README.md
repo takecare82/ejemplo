@@ -17,7 +17,7 @@ Para compilar se incluye el plugins de docker para empaquetar todo el proyecto:
 
 En el caso de Windows debe utilizar el script mvnw.cmd en lugar del mvnw
 
-### Windos
+### Windows
 
 ```cmd
 .\mvnw.cmd clean package -DskipTests
